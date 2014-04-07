@@ -1,8 +1,8 @@
 
 local function CDGMailReturnUpdate()
-	for MailItem = 1, GetNumMailItems(), 1 do
-		local senderDisplayName, senderCharacterName, subject, icon, unread, fromSystem, fromCustomerService, returned, numAttachments, attachedMoney, codAmount, expiresInDays, secsSinceReceived = GetMailItemInfo(MailItem)
-		d(string.format("Item %d from %s Sender %s Subject %s", MailItem, senderDisplayName, senderCharacterName, subject ))
+	for mailItem = 1, GetNumMailItems(), 1 do
+		local senderDisplayName, senderCharacterName, subject, icon, unread, fromSystem, fromCustomerService, returned, numAttachments, attachedMoney, codAmount, expiresInDays, secsSinceReceived = GetMailItemInfo(mailItem)
+		d("Item "..mailItem.." from "..senderDisplayName.." subject "..subject)
 	end
 end
 
