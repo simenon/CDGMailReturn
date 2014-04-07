@@ -1,5 +1,5 @@
 function CDGMailReturnUpdate_OnInitialized()
-	EVEMT_MANAGER:RegisterForEvent("CDGMailReturn",EVENT_MAIL_INBOX_UPDATE, CDGMailReturnUpdate)
+	EVENT_MANAGER:RegisterForEvent("CDGMailReturn",EVENT_MAIL_INBOX_UPDATE, CDGMailReturnUpdate)
 end
 
 local function CDGMailReturnUpdate()
