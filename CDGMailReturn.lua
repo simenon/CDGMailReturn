@@ -1,8 +1,10 @@
 
 local function CDGMailReturnUpdate()
   local numMailItems = GetNumMailItems()
+	local nextMailId = nil
+
 	for mailItem = 1, numMailItems, 1 do
-		nextMailId = GetNextMailId( mailItem )
+		nextMailId = GetNextMailId( nextMailId )
 		local senderDisplayName, senderCharacterName, subject, icon, unread, fromSystem, fromCustomerService, returned, numAttachments, attachedMoney, codAmount, expiresInDays, secsSinceReceived = GetMailItemInfo( nextMailId )
 		d( string.format( "Item %d from %s with subject %s received ", nextMailId, senderDisplayName, subject ) ) 
 	end
